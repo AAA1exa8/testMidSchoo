@@ -34,6 +34,7 @@ mid_school_zaloha1 <- mid_school
 mid_school <- mid_school[,c(1, 2, 7, 3, 4, 5, 6)]
 
 
+# Udělá groupes podle krajů a v nich to spočítá počet žáků
 number_of_schools <- mid_school %>%
   group_by(kraj) %>%
   count(kraj, name = "number_of_schools", sort = TRUE)
