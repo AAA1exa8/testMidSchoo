@@ -1,4 +1,4 @@
-# vezmeme jen sloupce s počtem žáků a psycholog a z nich si vezmeme jen řákdy kde není psycholog
+# groupneme podle psychologa/spec_pedagog a spočítáme průměrný počet žáků v těchto skupinách
 mean_zaci_psycholog <- mid_school %>%
   group_by(psycholog) %>%
   summarise(avgZaku = mean(pocet_zaku))
