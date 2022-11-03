@@ -32,3 +32,8 @@ mid_school <- mid_school %>% mutate(nuts2 = strtrim(as.character(mid_school$kraj
 mid_school_zaloha1 <- mid_school
 # přerovná columns aby byly columns kraj a nuts2 vedle sebe
 mid_school <- mid_school[,c(1, 2, 7, 3, 4, 5, 6)]
+
+
+number_of_schools <- mid_school %>%
+  group_by(kraj) %>%
+  count(kraj)
